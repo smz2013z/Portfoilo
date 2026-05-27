@@ -1,8 +1,11 @@
-let available = true;
-
+// ===== CONTACT POPUP =====
+// EDIT HERE: change this message to your real contact info
 function contactMe() {
-    alert("Message me to book an edit!");
+    alert("Email me at \nsamvfx02@gmail.com");
 }
+
+// ===== STATUS TOGGLE =====
+let available = true;
 
 function changeStatus() {
     let status = document.getElementById("status");
@@ -18,6 +21,7 @@ function changeStatus() {
     available = !available;
 }
 
+// ===== SCROLL REVEAL ANIMATION =====
 let revealElements = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
@@ -33,3 +37,15 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+// ===== FAQ TOGGLE =====
+function toggleFAQ(index) {
+    let answers = document.querySelectorAll(".faq-answer");
+    let answer = answers[index];
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+    } else {
+        answer.style.display = "block";
+    }
+}
